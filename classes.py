@@ -11,7 +11,7 @@ class Television:
     MIN_VOLUME = 0  # Minimum TV volume
     MAX_VOLUME = 2  # Maximum TV volume
 
-    def __init__(self)->None:
+    def __init__(self) -> None:
         """
         Function to set up a television object.
         Television is set to minimum channel, minimum volume, and off.
@@ -20,7 +20,7 @@ class Television:
         self.__TV_volume = Television.MIN_VOLUME
         self.__TV_status = False
 
-    def power(self)->None:
+    def power(self) -> None:
         """
         Function which turns the television on or off (on = True, off = False).
         """
@@ -29,7 +29,7 @@ class Television:
         else:
             self.__TV_status = False
 
-    def channel_up(self)->None:
+    def channel_up(self) -> None:
         """
         Function to increment the channel by 1. If the channel is at max channel,
         the channel is changed to the minimum channel.
@@ -40,7 +40,7 @@ class Television:
             else:
                 self.__TV_channel = Television.MIN_CHANNEL
 
-    def channel_down(self)->None:
+    def channel_down(self) -> None:
         """
         Function to decrement the channel by 1. If the channel is at min channel,
         the channel is changed to the maximum channel.
@@ -51,7 +51,7 @@ class Television:
             else:
                 self.__TV_channel = Television.MAX_CHANNEL
 
-    def volume_up(self)->None:
+    def volume_up(self) -> None:
         """
         Function to increment the volume by 1. If the channel is at max volume,
         the volume remains unchanged.
@@ -60,7 +60,7 @@ class Television:
             if self.__TV_volume < Television.MAX_VOLUME:
                 self.__TV_volume += 1
 
-    def volume_down(self)->None:
+    def volume_down(self) -> None:
         """
         Function to decrement the volume by 1. If the channel is at min volume,
         the volume remains unchanged.
@@ -69,7 +69,7 @@ class Television:
             if self.__TV_volume > Television.MIN_VOLUME:
                 self.__TV_volume -= 1
 
-    def __str__(self)->str:
+    def __str__(self) -> str:
         """
         Function to return television status.
         :return: TV status in on (True or False), Channel, Volume.
