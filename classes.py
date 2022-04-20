@@ -16,9 +16,9 @@ class Television:
         Function to set up a television object.
         Television is set to minimum channel, minimum volume, and off.
         """
-        self.__TV_channel = Television.MIN_CHANNEL
-        self.__TV_volume = Television.MIN_VOLUME
-        self.__TV_status = False
+        self.__TV_channel: int = Television.MIN_CHANNEL
+        self.__TV_volume: int = Television.MIN_VOLUME
+        self.__TV_status: bool = False
 
     def power(self) -> None:
         """
